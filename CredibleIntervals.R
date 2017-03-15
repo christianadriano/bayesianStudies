@@ -13,6 +13,19 @@ qbeta(0.975,8,16)
 
 #find the posterior probability that ??>0.90 
 qbeta(0.90,8,16)
-[1] 0.4585561, which is larger than 0.35
+#[1] 0.4585561, which is larger than 0.35
 
 qbeta(0.95,8,16)
+#-----------------------------------------------
+#Plotting gamma distribution for Poisson exercises
+
+gam=seq(from=0,to=20,by=1)
+
+plot(gam,dgamma(gam,67,6),type="l")
+lines(gam,dgamma(gam,8,1),lty=2)
+lines(gam,dgamma(gam,67,6),lty=3)
+
+# equal-tailed 90% credible interval
+qgamma(0.05,67,6)
+qgamma(0.95,67,6)
+
